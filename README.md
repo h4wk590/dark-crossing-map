@@ -13,5 +13,5 @@ Make the above static map an interactive map that displays:
 ## Why?
 
 - Fun
--Learning
+- Learning
 - Helps out DnD campaign mates 
