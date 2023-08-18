@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QGIS Map Website</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        /* CSS */
+        body {
+            background-color: #4d4a49;
+            color: white;
+        }
+        .sidebar {
+            text-align: center;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar li {
+            padding: 10px;
+        }
+        .sidebar li:hover {
+            background-color: #f8f9fa;
+        }
+        iframe {
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid mt-4">
+        <div class="row justify-content-center">
+            <div class="col-md-3">
+                <div class="sidebar">
+                    <h2 class="mb-4">Available Maps</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href="{{ url_for('static', filename='maps/map1/index.html') }}" target="mapFrame">Map 1</a></li>
+                        <li class="list-group-item"><a href="{{ url_for('static', filename='maps/map2/index.html') }}" target="mapFrame">Map 2</a></li>
+                        <!-- map links here -->
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <iframe name="mapFrame" src="{{ url_for('static', filename='maps/map1/index.html') }}" width="100%" height="600"></iframe>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
