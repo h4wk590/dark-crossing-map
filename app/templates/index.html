@@ -9,6 +9,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <style>
         /* CSS */
+        body {
+            background-color: #4d4a49;
+            color: white;
+        }
         .sidebar {
             text-align: center;
         }
@@ -22,6 +26,9 @@
         .sidebar li:hover {
             background-color: #f8f9fa;
         }
+        iframe {
+            border: none;
+        }
     </style>
 </head>
 <body>
@@ -29,11 +36,11 @@
         <div class="row justify-content-center">
             <div class="col-md-3">
                 <div class="sidebar">
-                    <h2>Available Maps</h2>
-                    <ul>
-                        <li><a href="{{ url_for('static', filename='maps/map1/index.html') }}" target="mapFrame">Map 1</a></li>
-                        <li><a href="{{ url_for('static', filename='maps/map2/index.html') }}" target="mapFrame">Map 2</a></li>
-                        <!-- Add map links -->
+                    <h2 class="mb-4">Available Maps</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href="{{ url_for('static', filename='maps/map1/index.html') }}" target="mapFrame">Map 1</a></li>
+                        <li class="list-group-item"><a href="{{ url_for('static', filename='maps/map2/index.html') }}" target="mapFrame">Map 2</a></li>
+                        <!-- map links here -->
                     </ul>
                 </div>
             </div>
