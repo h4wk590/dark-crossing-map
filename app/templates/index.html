@@ -4,9 +4,6 @@
     <title>QGIS Map Website</title>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <style>
         /* CSS */
         body {
@@ -29,6 +26,12 @@
         iframe {
             border: none;
         }
+        .footer {
+            background-color: white;
+            color: black;
+            text-align: center;
+            padding: 10px;
+        }
     </style>
 </head>
 <body>
@@ -40,7 +43,7 @@
                     <ul class="list-group">
                         <li class="list-group-item"><a href="{{ url_for('static', filename='maps/map1/index.html') }}" target="mapFrame">Map 1</a></li>
                         <li class="list-group-item"><a href="{{ url_for('static', filename='maps/map2/index.html') }}" target="mapFrame">Map 2</a></li>
-                        <!-- map links here -->
+                        <!-- more map links -->
                     </ul>
                 </div>
             </div>
@@ -49,5 +52,9 @@
             </div>
         </div>
     </div>
+    <div class="footer">
+        <p>&copy; Aidan Brown {{ now.year }}</p>
+    </div>
 </body>
 </html>
+
